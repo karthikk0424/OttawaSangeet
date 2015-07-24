@@ -15,7 +15,7 @@ public class MainScreenManager : MonoBehaviour
 	private void PlaySingerTween()
 	{
 		m_Tween = tweenTarget.AddComponent<TweenPosition>();
-		m_Tween.AddOnFinished(TweenRemoved);
+		m_Tween.AddOnFinished(RemoveTweenOnFinish);
 		m_Tween.from = Vector3.zero;
 		m_Tween.to = new Vector3(0, -1200, 0);
 		m_Tween.PlayForward();
@@ -24,9 +24,18 @@ public class MainScreenManager : MonoBehaviour
 	private void PlayTitleTween()
 	{
 		m_Tween = tweenTarget.AddComponent<TweenPosition>();
-		m_Tween.AddOnFinished(TweenRemoved);
+		m_Tween.AddOnFinished(RemoveTweenOnFinish);
 		m_Tween.from = new Vector3(0, 300, 0);
 		m_Tween.to = Vector3.zero;
+		m_Tween.PlayForward();
+	}
+
+	private void PlayAdTween()
+	{
+		m_Tween = tweenTarget.AddComponent<TweenPosition>();
+		m_Tween.AddOnFinished(RemoveTweenOnFinish);
+		m_Tween.from = Vector3.zero;
+		m_Tween.to = new Vector3(0, 1108, 0);
 		m_Tween.PlayForward();
 	}
 
@@ -40,10 +49,17 @@ public class MainScreenManager : MonoBehaviour
 		{
 			PlayTitleTween();
 		}
+		else if(Input.GetKeyDown(KeyCode.A))
+		{
+			PlayAdTween();
+		}
 	}
 
-	private void TweenRemoved()
+	private void RemoveTweenOnFinish()
 	{
-		Destroy(tweenTarget.GetComponent<TweenPosition>());
+		if(tweenTarget.GetComponent<TweenPosition>() != null)
+		{
+			Destroy(tweenTarget.GetComponent<TweenPosition>());
+		}
 	}
 }
