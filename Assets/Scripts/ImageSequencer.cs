@@ -10,23 +10,26 @@ public class ImageSequencer : MonoBehaviour {
 
 	private void Start()
 	{
-		InvokeRepeating("BeginLoop", timeInterval, timeInterval);
+		StartCoroutine(BeginLoop());
 	}
 
-	public void BeginLoop()
+	private IEnumerator BeginLoop()
 	{
 		UITexture m_texture = GetComponent<UITexture>();
 		m_texture.mainTexture = images[index];
 		m_texture.MakePixelPerfect();
 		index++;
+		yield return new WaitForSeconds(timeInterval);
+		
 		if(index == images.Length)
 		{
 			if(LoadLevelName != null)
 			{
 				Application.LoadLevel(LoadLevelName);
-				return;
 			}
 			index = 0;
 		}
+		StopAllCoroutines();
+		StartCoroutine(BeginLoop());
 	}
 }

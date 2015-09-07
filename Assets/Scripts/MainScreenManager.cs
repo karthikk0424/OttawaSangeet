@@ -1,10 +1,17 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Xml;
+using System.Xml.Linq;
 
 public class MainScreenManager : MonoBehaviour 
 {
 	private TweenPosition m_Tween;
 	public GameObject tweenTarget;
+	public UILabel SongTitleText;
+	public UILabel SingerText;
 
 	private void ResetTween()
 	{
@@ -19,6 +26,7 @@ public class MainScreenManager : MonoBehaviour
 		m_Tween.from = Vector3.zero;
 		m_Tween.to = new Vector3(0, -1200, 0);
 		m_Tween.PlayForward();
+		Invoke("PlayTitleTween", 10);
 	}
 
 	private void PlayTitleTween()
@@ -53,6 +61,13 @@ public class MainScreenManager : MonoBehaviour
 		{
 			PlayAdTween();
 		}
+		if(stringToEdit.EndsWith("t"))
+		{
+			char[] trim = {'t'};
+			LoadSongText(stringToEdit.Trim(trim));
+			PlaySingerTween();
+			stringToEdit = "";
+		}
 	}
 
 	private void RemoveTweenOnFinish()
@@ -61,5 +76,31 @@ public class MainScreenManager : MonoBehaviour
 		{
 			Destroy(tweenTarget.GetComponent<TweenPosition>());
 		}
+	}
+
+	private void LoadSongText(string trackNumber)
+	{
+		XmlDocument document = new XmlDocument();
+		document.Load(Application.streamingAssetsPath + "/songlist.xml");
+
+		int songNumber = 0;
+
+		foreach (XmlNode node in document.GetElementsByTagName("Song"))
+		{
+			if (node.Attributes["Number"].Value == trackNumber)
+			{
+				SongTitleText.text = node.Attributes["Name"].Value;
+				songNumber = Int32.Parse(node.Attributes["Number"].Value);
+				SingerText.text = node.Attributes["Star"].Value;
+			}
+		}
+	}
+
+	private string stringToEdit = "";
+	private void OnGUI() {
+		GUI.SetNextControlName("CMTextField");
+		stringToEdit = GUI.TextField(new Rect(0, 10, 200, 20), stringToEdit, 25);
+		if (GUI.Button(new Rect(0, Screen.height - 20, 80, 20), ""))
+			GUI.FocusControl("CMTextField");
 	}
 }
