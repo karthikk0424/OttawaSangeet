@@ -1,29 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Songs>
-  <Song Name="Vinmeen" Number="1" Star= "Hari"/>
-  <Song Name="Thaniye" Number="2" Star= "Hari"/>
-  <Song Name="Galiyan" Number="3" Star= "Hari"/>
-  <Song Name="Violin Song" Number="4" Star= "Hari"/>
-  <Song Name="Pazhamuthir Cholai" Number="5" Star= "Hari"/>
-  <Song Name="Malargal Keten" Number="6" Star= "Hari"/>
-  <Song Name="Ninnu Kori" Number="7" Star= "Hari"/>
-  <Song Name="Chinna Chinna" Number="8" Star= "Hari"/>
-  <Song Name="Om Sivoham" Number="9" Star= "Hari"/>
-  <Song Name="Tune Maari" Number="10" Star= "Hari"/>
-  <Song Name="Mona Mona" Number="11" Star= "Hari"/>
-  <Song Name="Bhare Naina" Number="12" Star= "Hari"/>
-  <Song Name="Manwa Laage" Number="13" Star= "Hari"/>
-  <Song Name="Thanga Magan" Number="14" Star= "Hari"/>
-  <Song Name="Kalakala" Number="15" Star= "Hari"/>
-  <Song Name="Yaar Indha" Number="16" Star= "Hari"/>
-  <Song Name="Tu Chale" Number="17" Star= "Hari"/>
-  <Song Name="Bang Bang " Number="18" Star= "Hari"/>
-  <Song Name="Maargazhi Thingal " Number="19" Star= "Hari"/>
-  <Song Name="Kaathodu Thaan " Number="20" Star= "Hari"/>
-  <Song Name="Yele Yelama " Number="21" Star= "Hari"/>
-  <Song Name="Aathi" Number="22" Star= "Hari"/>
-  <Song Name="Chikini Chamela" Number="23" Star= "Hari"/>
-  <Song Name="Nila Athu Vaanathu" Number="24" Star= "Hari"/>
-  <Song Name="Paapa Ka Hete Hain" Number="25" Star= "Hari"/>
-  <Song Name="Kuchi Kuchi Raakama" Number="26" Star= "Hari"/>
+  <Song Name="Om Sivoham" Number="1" Star= "Flute Siva, Srini Janarthanan, Debasish Chakravarty, Sundar Siva, Sayohn Ahilan"/>
+  <Song Name="Vinmeen" Number="2" Star= "Aswen Sriranganathan, Abhi Vengadeswaran"/>
+  <Song Name="Thaniye" Number="3" Star= "Flute Siva, Alex Ouellette , Amirthan Sothivanan"/>
+  <Song Name="Galiyan" Number="4" Star= "Debasish Chakravarty"/>
+  <Song Name="Violin Song" Number="5" Star= "Abhi Vengadeswaran, Aswen Srirangananthan, Amirthan Sothivannan"/>
+  <Song Name="Pazhamuthir Cholai" Number="6" Star= "Hari Parameswaran"/>
+  <Song Name="Malargal Keten" Number="7" Star= "Rashmi Venkateswaran"/>
+  <Song Name="Ninnu Kori" Number="8" Star= "Divya Vivekanandan"/>
+  <Song Name="Chinna Chinna" Number="9" Star= "Kaya Kapilan, Flute Siva"/>
+  <Song Name="Tune Maari" Number="10" Star= "Kanchana Babu, Shishir Shahnawaz,Srinivasan Janarthanan, Bollywood For Fun"/>
+  <Song Name="Mona Mona" Number="11" Star= "Divya Vivekanandan, Srinivasan Janarthanan, Chitra Siva, Ann Ignatius, Flute Siva"/>
+  <Song Name="Bhare Naina" Number="12" Star= "Divya Vivekanandan, Alex Ouellette, Debasish Chakravarty"/>
+  <Song Name="Manwa Laage" Number="13" Star= "Divya Vivekanandan,Debasish Chakravarty,Abhi Sriranganatha, Dhivya Sriranganathan"/>
+  <Song Name="Thanga Magan" Number="14" Star= "Rashmi Venketeswaran, Hari Parameswaran, Harini Ratnavel, Kaya Kapilan, Ann Ignatius"/>
+  <Song Name="Kalakala" Number="15" Star= "Divya Vivekanandan, Pratheep Tharmalingam"/>
+  <Song Name="Yaar Indha" Number="16" Star= "Ann Ignatius, Amirthan Sothivannan"/>
+  <Song Name="Tu Chale" Number="17" Star= "Divya Vivekanandan and Flute Siva"/>
+  <Song Name="Bang Bang " Number="18" Star= "Debasish Chakravarty, Shruthi Karthi, Aswen Sri, Dhivya Sri, Sayonh Ahilan, Alex Ouellette, Flute Siva"/>
+  <Song Name="Maargazhi Thingal " Number="19" Star= "Harini Ratnavel, Flute Siva, Chitra Siva, Ann Ignatius, Hiranniya Yoga and Thameera Kumar"/>
+  <Song Name="Kaathodu Thaan " Number="20" Star= "Kanchana Babu"/>
+  <Song Name="Yele Yelama " Number="21" Star= "Shruthi Karthi, Aswen Sriranganathan, Flute Siva, Kanchu Babu, Prima Dance School"/>
+  <Song Name="Aathi" Number="22" Star= "Sundar Siva and Amirthan, Sayohn Ahilan, Srini Janarthanan"/>
+  <Song Name="Chikini Chamela" Number="23" Star= "Soumi Guha, Debasish Chakravarty, Bollywood Dance Pro by Shefali"/>
+  <Song Name="Nila Athu Vaanathu" Number="24" Star= "Srinivasan, Divya Vivekanandan"/>
+  <Song Name="Paapa Ka Hete Hain" Number="25" Star= "Roshan Karavally"/>
+  <Song Name="Kuchi Kuchi Raakama" Number="26" Star= "Nikhila Parameswaran, Soumi Guha, Wingson Karavally, Bollywood Dance Delights by Vandana Sharma"/>
+  <Song Name="Ei Meghla" Number="27" Star= "Flute Siva, Sayohn Ahilan"/>
+  <Song Name="Rehna Hai Tere Dil Mein" Number="28" Star= "Sundar Siva, Flute Siva, Jannat"/>
 </Songs>

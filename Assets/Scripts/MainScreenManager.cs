@@ -49,11 +49,7 @@ public class MainScreenManager : MonoBehaviour
 
 	private void Update()
 	{
-		if(Input.GetKeyDown(KeyCode.K))
-		{
-			PlaySingerTween();
-		}
-		else if(Input.GetKeyDown(KeyCode.U))
+		if(Input.GetKeyDown(KeyCode.U))
 		{
 			PlayTitleTween();
 		}
@@ -99,7 +95,7 @@ public class MainScreenManager : MonoBehaviour
 	private string stringToEdit = "";
 	private void OnGUI() {
 		GUI.SetNextControlName("CMTextField");
-		stringToEdit = GUI.TextField(new Rect(0, 10, 200, 20), stringToEdit, 25);
+		stringToEdit = GUI.TextField(new Rect(100, Screen.height - 20, 20, 20), stringToEdit, 25);
 		if (GUI.Button(new Rect(0, Screen.height - 20, 80, 20), ""))
 			GUI.FocusControl("CMTextField");
 	}
