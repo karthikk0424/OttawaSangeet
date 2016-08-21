@@ -5,6 +5,7 @@ public class ManagerParticles : MonoBehaviour {
 	public ParticleEmitter Green;
 	public ParticleEmitter Blue;
 	public ParticleEmitter Red;
+	public GameObject Firework;
 
 	// Update is called once per frame
 	void Update () {
@@ -46,6 +47,18 @@ public class ManagerParticles : MonoBehaviour {
 			Green.emit = false;
 			Red.emit = false;
 			Blue.emit = false;
+		}
+
+		else if(Input.GetKeyUp(KeyCode.Alpha4))
+		{
+            if (Firework.activeSelf)
+            {
+                Firework.SetActive(false);
+            }
+            else
+            {
+                Firework.SetActive(true);
+            }
 		}
 	}
 }
