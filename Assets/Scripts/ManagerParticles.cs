@@ -51,13 +51,13 @@ public class ManagerParticles : MonoBehaviour {
 
 		else if(Input.GetKeyUp(KeyCode.Alpha4))
 		{
-            if (Firework.activeSelf)
+            if (!Firework.GetComponent<ParticleSystem>().isPlaying)
             {
-                Firework.SetActive(false);
+                Firework.GetComponent<ParticleSystem>().Play();   
             }
             else
             {
-                Firework.SetActive(true);
+                Firework.GetComponent<ParticleSystem>().Stop();
             }
 		}
 	}

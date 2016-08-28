@@ -5,7 +5,7 @@ public class PlayVideo : MonoBehaviour {
 	
 	public MovieTexture movie;
 	public string LoadLevel;
-	public bool PlayAudio;
+	public bool PlayAudio = false;
 	public bool loop = false;
 
 	public void Start()
@@ -18,7 +18,6 @@ public class PlayVideo : MonoBehaviour {
 			source.Play();
 		}
 		movie.Play();
-
 	}
 
 	public void Update()

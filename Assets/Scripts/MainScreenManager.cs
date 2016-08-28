@@ -55,7 +55,7 @@ public class MainScreenManager : MonoBehaviour
 		}
 		else if(Input.GetKeyDown(KeyCode.A))
 		{
-			PlayAdTween();
+			//PlayAdTween();
 		}
 		if(stringToEdit.EndsWith("t"))
 		{

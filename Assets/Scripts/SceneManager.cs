@@ -18,30 +18,26 @@ public class SceneManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update()
 	{
-		if(Input.GetKeyDown(KeyCode.P))
-		{
-			Application.LoadLevel("TheePori");
-		}
-		else if(Input.GetKeyDown(KeyCode.Y))
-		{
-			Application.LoadLevel("AcidRain");
-		}
-		else if(Input.GetKeyDown(KeyCode.Z))
+		if(Input.GetKeyDown(KeyCode.Z))
 		{
 			Application.LoadLevel("OttawaSangeet");
 		}
-		else if(Input.GetKeyDown(KeyCode.S))
-		{
-			Application.LoadLevel("Shatter");
-		}
+        else if (Input.GetKeyDown(KeyCode.A))
+        {
+            Application.LoadLevel("Accelerate");
+        }
 		else if(Input.GetKeyDown(KeyCode.D))
 		{
 			Application.LoadLevel("Disco");
 		}
-		else if(Input.GetKeyDown(KeyCode.B))
-		{
-			Application.LoadLevel("ShatterLogo");
-		}
+        else if (Input.GetKeyDown(KeyCode.F))
+        {
+            Application.LoadLevel("Flame");
+        }
+        else if (Input.GetKeyDown(KeyCode.B))
+        {
+            Application.LoadLevel("BlueMotion");
+        }
 		else if(Input.GetKeyDown(KeyCode.I))
 		{
 			Application.LoadLevel("Sequencer");
@@ -50,13 +46,9 @@ public class SceneManager : MonoBehaviour {
 		{
 			Application.LoadLevel("Applauncher");
 		}
-		else if(Input.GetKeyDown(KeyCode.P))
-		{
-			Application.LoadLevel("Pookale");
-		}
 		else if(Input.GetKeyDown(KeyCode.C))
 		{
-			Application.LoadLevel("ChinnaChinna");
+			Application.LoadLevel("Splash");
 		}
 		else if(Input.GetKeyDown(KeyCode.N))
 		{
@@ -64,19 +56,11 @@ public class SceneManager : MonoBehaviour {
 		}
 		else if(Input.GetKeyDown(KeyCode.R))
 		{
-			Application.LoadLevel("Credits");
+            Application.LoadLevel("CreditsFireworks");
 		}
-		else if(Input.GetKeyDown(KeyCode.V))
-		{
-			Application.LoadLevel("SnowScene");
-		}
-		else if(Input.GetKeyDown(KeyCode.X))
-		{
-			Application.LoadLevel("SnowScene2");
-		}
-		else if(Input.GetKeyDown(KeyCode.K))
-		{
-			Application.LoadLevel("InShowTrailer");
-		}
+        else if (Input.GetKeyDown(KeyCode.M))
+        {
+            Application.LoadLevel("Moon");
+        }
 	}
 }
