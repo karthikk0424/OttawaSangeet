@@ -34,6 +34,18 @@ public class SceneManager : MonoBehaviour {
         {
             Application.LoadLevel("Halo");
         }
+        else if (Input.GetKeyDown(KeyCode.B))
+        {
+            Application.LoadLevel("BlueMotion");
+        }
+        else if (Input.GetKeyDown(KeyCode.N))
+        {
+            Application.LoadLevel("Fire");
+        }
+        else if (Input.GetKeyDown(KeyCode.M))
+        {
+            Application.LoadLevel("Moon");
+        }
         else if (Input.GetKeyDown(KeyCode.A))
         {
             Application.LoadLevel("Accelerate");
@@ -50,29 +62,33 @@ public class SceneManager : MonoBehaviour {
         {
             Application.LoadLevel("Flame");
         }
-        else if (Input.GetKeyDown(KeyCode.B))
+        else if (Input.GetKeyDown(KeyCode.G))
         {
-            Application.LoadLevel("BlueMotion");
+            Application.LoadLevel("MagicalGround");
+        }
+        else if (Input.GetKeyDown(KeyCode.H))
+        {
+            Application.LoadLevel("Applauncher");
         }
 		else if(Input.GetKeyDown(KeyCode.I))
 		{
 			Application.LoadLevel("Sequencer");
-		}
-		else if(Input.GetKeyDown(KeyCode.H))
-		{
-			Application.LoadLevel("Applauncher");
-		}
-		else if(Input.GetKeyDown(KeyCode.N))
-		{
-			Application.LoadLevel("Fire");
-		}
+        }
+        else if (Input.GetKeyDown(KeyCode.Q))
+        {
+            Application.LoadLevel("RainbowFlare");
+        }
+        else if (Input.GetKeyDown(KeyCode.W))
+        {
+            Application.LoadLevel("RainbowSpace");
+        }
+        else if (Input.GetKeyDown(KeyCode.E))
+        {
+            Application.LoadLevel("GlowingRing");
+        }
 		else if(Input.GetKeyDown(KeyCode.R))
 		{
             Application.LoadLevel("CreditsFireworks");
-		}
-        else if (Input.GetKeyDown(KeyCode.M))
-        {
-            Application.LoadLevel("Moon");
         }
 	}
 }
