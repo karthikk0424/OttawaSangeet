@@ -22,9 +22,25 @@ public class SceneManager : MonoBehaviour {
 		{
 			Application.LoadLevel("OttawaSangeet");
 		}
+        else if (Input.GetKeyDown(KeyCode.X))
+        {
+            Application.LoadLevel("ColorfulRays");
+        }
+        else if (Input.GetKeyDown(KeyCode.C))
+        {
+            Application.LoadLevel("TravelNebula");
+        }
+        else if (Input.GetKeyDown(KeyCode.V))
+        {
+            Application.LoadLevel("Halo");
+        }
         else if (Input.GetKeyDown(KeyCode.A))
         {
             Application.LoadLevel("Accelerate");
+        }
+        else if (Input.GetKeyDown(KeyCode.S))
+        {
+            Application.LoadLevel("Splash");
         }
 		else if(Input.GetKeyDown(KeyCode.D))
 		{
@@ -45,10 +61,6 @@ public class SceneManager : MonoBehaviour {
 		else if(Input.GetKeyDown(KeyCode.H))
 		{
 			Application.LoadLevel("Applauncher");
-		}
-		else if(Input.GetKeyDown(KeyCode.C))
-		{
-			Application.LoadLevel("Splash");
 		}
 		else if(Input.GetKeyDown(KeyCode.N))
 		{

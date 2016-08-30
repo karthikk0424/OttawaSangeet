@@ -13,9 +13,14 @@ public class PlayVideo : MonoBehaviour {
 		GetComponent<Renderer>().material.mainTexture = movie;
 		if(PlayAudio)
 		{
-			AudioSource source = gameObject.AddComponent<AudioSource>();
-			source.clip = movie.audioClip;
-			source.Play();
+            AudioSource audioSource = GetComponent<AudioSource>();
+
+            if (audioSource == null)
+            {
+                audioSource = gameObject.AddComponent<AudioSource>();
+            }
+            audioSource.clip = movie.audioClip;
+            audioSource.Play();
 		}
 		movie.Play();
 	}

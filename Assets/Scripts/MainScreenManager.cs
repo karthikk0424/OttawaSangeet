@@ -12,6 +12,8 @@ public class MainScreenManager : MonoBehaviour
 	public GameObject tweenTarget;
 	public UILabel SongTitleText;
 	public UILabel SingerText;
+    public UILabel ChorusText;
+    public UILabel DanceText;
 
 	private void ResetTween()
 	{
@@ -77,7 +79,7 @@ public class MainScreenManager : MonoBehaviour
 	private void LoadSongText(string trackNumber)
 	{
 		XmlDocument document = new XmlDocument();
-		document.Load(Application.streamingAssetsPath + "/songlist.xml");
+		document.Load(Application.streamingAssetsPath + "/songlistspectacle.xml");
 
 		int songNumber = 0;
 
@@ -87,7 +89,9 @@ public class MainScreenManager : MonoBehaviour
 			{
 				SongTitleText.text = node.Attributes["Name"].Value;
 				songNumber = Int32.Parse(node.Attributes["Number"].Value);
-				SingerText.text = node.Attributes["Star"].Value;
+                SingerText.text = node.Attributes["Singers"].Value;
+                ChorusText.text = node.Attributes["Chorus"].Value;
+                DanceText.text = node.Attributes["Dance"].Value;
 			}
 		}
 	}
