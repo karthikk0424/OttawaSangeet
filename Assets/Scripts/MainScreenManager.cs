@@ -80,8 +80,12 @@ public class MainScreenManager : MonoBehaviour
 	{
 		XmlDocument document = new XmlDocument();
 		document.Load(Application.streamingAssetsPath + "/songlistspectacle.xml");
+        int songNumber = 0;
 
-		int songNumber = 0;
+        SongTitleText.text = "";
+        SingerText.text = "";
+        ChorusText.text = "";
+        DanceText.text = "";
 
 		foreach (XmlNode node in document.GetElementsByTagName("Song"))
 		{
@@ -91,7 +95,15 @@ public class MainScreenManager : MonoBehaviour
 				songNumber = Int32.Parse(node.Attributes["Number"].Value);
                 SingerText.text = node.Attributes["Singers"].Value;
                 ChorusText.text = node.Attributes["Chorus"].Value;
-                DanceText.text = node.Attributes["Dance"].Value;
+
+                if (ChorusText.text == "")
+                {
+                    ChorusText.text = node.Attributes["Dance"].Value;
+                }
+                else
+                {
+                    DanceText.text = node.Attributes["Dance"].Value;
+                }
 			}
 		}
 	}

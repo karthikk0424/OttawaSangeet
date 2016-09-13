@@ -70,9 +70,17 @@ public class SceneManager : MonoBehaviour {
         {
             Application.LoadLevel("Applauncher");
         }
-		else if(Input.GetKeyDown(KeyCode.I))
-		{
-			Application.LoadLevel("Sequencer");
+        else if (Input.GetKeyDown(KeyCode.J))
+        {
+            Application.LoadLevel("Tornado");
+        }
+        else if (Input.GetKeyDown(KeyCode.K))
+        {
+            Application.LoadLevel("Party");
+        }
+        else if (Input.GetKeyDown(KeyCode.L))
+        {
+            Application.LoadLevel("Rain");
         }
         else if (Input.GetKeyDown(KeyCode.Q))
         {
@@ -89,6 +97,26 @@ public class SceneManager : MonoBehaviour {
 		else if(Input.GetKeyDown(KeyCode.R))
 		{
             Application.LoadLevel("CreditsFireworks");
+        }
+        else if (Input.GetKeyDown(KeyCode.T))
+        {
+            Application.LoadLevel("WallLights");
+        }
+        else if (Input.GetKeyDown(KeyCode.Y))
+        {
+            Application.LoadLevel("GoldenSparkle");
+        }
+        else if (Input.GetKeyDown(KeyCode.I))
+        {
+            Application.LoadLevel("Sequencer");
+        }
+        else if (Input.GetKeyDown(KeyCode.O))
+        {
+            Application.LoadLevel("BW");
+        }
+        else if (Input.GetKeyDown(KeyCode.P))
+        {
+            Application.LoadLevel("Lamp");
         }
 	}
 }

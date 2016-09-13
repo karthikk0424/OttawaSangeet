@@ -1,5 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Songs>
-  <Song Name="Dilse Re" Number="1" Singers= "" Chorus="" Dance=""/>
-  <Song Name="Song: Janani Janani" Number="2" Singers= "Singers:  Karthik" Chorus="Chorus:  Everybody" Dance="Dance:  Ottawa Crusaders"/>
+  <Song Name="Song:   Dilse Re" Number="100" Singers= "" Chorus="" Dance=""/>
+  <Song Name="Song:   Janani Janani" Number="200" Singers= "Singer:   Debasish" Chorus="Chorus:   Srini, Sai, Aswen, Siva" Dance="Dance:    Bharathanatyam by Aishwarya Vijayakumar"/>
+  <Song Name="Song:   Ganesha" Number="300" Singers= "Singer:   Sam" Chorus="Chorus:    Srini, Aswen, Sai and Siva" Dance="Dance:   Bharathanatyam by Aishwarya Vijayakumar"/>
+  <Song Name="Song:   Kannalaney" Number="1" Singers= "Singers:  	Dhivya and Amirthan" Chorus="" Dance=""/>
+  <Song Name="Song:   Deewani Mastani" Number="2" Singers= "Singer:    Divya Vivekanandan" Chorus="Dhivya,Ann,Shruthi,Siva,Srini,Amirthan,Aswen,Kanchana" Dance="Dance:    Jannat"/>
+  <Song Name="Song:   Kar Gui Chul" Number="3" Singers= "Singers:   Shruthi and Roshan" Chorus="" Dance="Dance:   Naomi Kapoor and Muskan Bhatia"/>
+  <Song Name="Song:   Soch Na" Number="4" Singers= "Singer:   Lakshmi Chopra" Chorus="" Dance=""/>
+  <Song Name="Song:   Amuthai Pozhiyum" Number="5" Singers= "Singer:    Rashmi Venkateswaran" Chorus="" Dance=""/>
+  <Song Name="Song:   Un Mela Oru Kannau" Number="6" Singers= "Singers:   Ann Ignatius and Praveen Kumar" Chorus="" Dance=""/>
+  <Song Name="Song:   Manogari" Number="7" Singers= "Singers: Divya Vivekanandan,Flute Siva and Sai Rupan" Chorus="Chorus:    Ann, Kanchana, Dhivya" Dance="Dance:    Bollywood For Fun"/>
+  <Song Name="Song:   Aaluma Doluma" Number="8" Singers= "Singers:    Sundar and Roshan" Chorus="" Dance="Dance:    Ottawa Crusaders"/>
+  <Song Name="Song:   Chanda Re / Vennilave" Number="9" Singers= "Singers:    Flute Siva and Divya Vivekanandan" Chorus="" Dance=""/>
+  <Song Name="Song:   Maangalyam" Number="10" Singers= "Singers: Wingson and Roshan Karavally,Kanchana Babu" Chorus="" Dance="Dance:    Malayali Youth of Ottawa"/>
+  <Song Name="Song:   Eena Meena" Number="11" Singers= "Singers:    Nandhana Radhakrishnan and Aswen Sri" Chorus="Chorus:    Flute Siva and Sundar" Dance=""/>
+  <Song Name="Song:   Kannukul Pothi Vaithu" Number="12" Singers= "Singers:   Rashmi, Hari and Flute Siva" Chorus="" Dance="Dance:    Shringaram Dance Academy"/>
+  <Song Name="Song:   Ek Do Theen" Number="13" Singers= "Singer:    Kanchana Babu" Chorus="" Dance=""/>
+  <Song Name="Song:   Ennai Konjam Maatri" Number="14" Singers= "Singers:   Kavitha Menon and Flute Siva" Chorus="" Dance=""/>
+  <Song Name="Song:   Ezhliasi Geethame" Number="15" Singers= "Singer:    Hari Parameswaran " Chorus="" Dance=""/>
+  <Song Name="Song:   Margazhi Poove" Number="16" Singers= "Singer:    Kaya Kapilan" Chorus="Chorus:    Divya, Chitra and Ann" Dance=""/>
+  <Song Name="Song:   Chupke Se" Number="17" Singers= "Singer:    Sitara Zebin" Chorus="Chorus:    Srini, Amirthan, Flute Siva, Sundar, Sai" Dance=""/>
+  <Song Name="Song:   Tum Hi Ho" Number="18" Singers= "Singers:    Aswen Sri, Chitra Siva, Dhivya Sri" Chorus="" Dance=""/>
+  <Song Name="Song:   Hosanna" Number="19" Singers= "Singers:    Flute Siva and Dhivya" Chorus="Chorus:   Sai and Aswen" Dance=""/>
+  <Song Name="Song:   Cham Cham Cham" Number="20" Singers= "Singers:    Shruthi and Amirthan" Chorus="Chorus:   Kanchana, Ann, Dhivya" Dance="Dance:    Jannat"/>
+  <Song Name="Song:   Ey Sandakara" Number="21" Singers= "Singer:    Kaya Kapilan" Chorus="" Dance=""/>
+  <Song Name="Song:   Yeh Tara Oh Tara" Number="22" Singers= "Singers: Nikhila Parameswaran and Shishir Shahnawaz" Chorus="" Dance="Dance:   Vandana Sharma"/>
+  <Song Name="Song:   Ulagam" Number="23" Singers= "Flute Siva,Amirthan,Sundar,Srini,Roshan,Sai,Aswen" Chorus="" Dance=""/>
+  <Song Name="Song:   Pani Vizhu Iravu" Number="24" Singers= "Singers:    Srini and Divya" Chorus="" Dance=""/>
 </Songs>
