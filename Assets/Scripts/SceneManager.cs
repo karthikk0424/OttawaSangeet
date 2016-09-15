@@ -118,5 +118,13 @@ public class SceneManager : MonoBehaviour {
         {
             Application.LoadLevel("Lamp");
         }
+        else if (Input.GetKeyDown(KeyCode.F1))
+        {
+            Application.LoadLevel("MayaNadhi");
+        }
+        else if (Input.GetKeyDown(KeyCode.F2))
+        {
+            Application.LoadLevel("1000Years");
+        }
 	}
 }
