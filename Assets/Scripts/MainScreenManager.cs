@@ -47,6 +47,7 @@ public class MainScreenManager : MonoBehaviour
 		m_Tween.from = Vector3.zero;
 		m_Tween.to = new Vector3(0, 1108, 0);
 		m_Tween.PlayForward();
+        Invoke("PlayTitleTween", 10);
 	}
 
 	private void Update()
@@ -55,9 +56,9 @@ public class MainScreenManager : MonoBehaviour
 		{
 			PlayTitleTween();
 		}
-		else if(Input.GetKeyDown(KeyCode.A))
+		else if(Input.GetKeyDown(KeyCode.F3))
 		{
-			//PlayAdTween();
+			PlayAdTween();
 		}
 		if(stringToEdit.EndsWith("t"))
 		{
