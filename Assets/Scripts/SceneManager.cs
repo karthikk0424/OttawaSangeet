@@ -18,10 +18,10 @@ public class SceneManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update()
 	{
-		if(Input.GetKeyDown(KeyCode.Z))
-		{
-			Application.LoadLevel("OttawaSangeet");
-		}
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            Application.LoadLevel("TheePori");
+        }
         else if (Input.GetKeyDown(KeyCode.X))
         {
             Application.LoadLevel("ColorfulRays");
@@ -46,7 +46,7 @@ public class SceneManager : MonoBehaviour {
         {
             Application.LoadLevel("Moon");
         }
-        else if (Input.GetKeyDown(KeyCode.A))
+        else if (Input.GetKeyDown(KeyCode.O))
         {
             Application.LoadLevel("Accelerate");
         }
@@ -110,10 +110,6 @@ public class SceneManager : MonoBehaviour {
         {
             Application.LoadLevel("Sequencer");
         }
-        else if (Input.GetKeyDown(KeyCode.O))
-        {
-            Application.LoadLevel("BW");
-        }
         else if (Input.GetKeyDown(KeyCode.P))
         {
             Application.LoadLevel("Lamp");
@@ -126,5 +122,21 @@ public class SceneManager : MonoBehaviour {
         {
             Application.LoadLevel("1000Years");
         }
+        else if (Input.GetKeyDown(KeyCode.F3))
+        {
+            Application.LoadLevel("StrongHold");
+        }
+        else if (Input.GetKeyDown(KeyCode.F4))
+        {
+            Application.LoadLevel("DiscoBall");
+        }
+        else if (Input.GetKeyDown(KeyCode.F5))
+        {
+            Application.LoadLevel("Baradwaj");
+        }
+        else if (Input.GetKeyDown(KeyCode.F6))
+        {
+            Application.LoadLevel("Sangeet");
+        } 
 	}
 }

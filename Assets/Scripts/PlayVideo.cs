@@ -7,7 +7,8 @@ public class PlayVideo : MonoBehaviour {
 	public string LoadLevel;
 	public bool PlayAudio = false;
 	public bool loop = false;
-
+    public AudioClip m_CustomAudioClip;
+    public bool m_UseCustomAudio = false;
 	public void Start()
 	{
 		GetComponent<Renderer>().material.mainTexture = movie;
@@ -19,8 +20,15 @@ public class PlayVideo : MonoBehaviour {
             {
                 audioSource = gameObject.AddComponent<AudioSource>();
             }
-            audioSource.clip = movie.audioClip;
-            audioSource.Play();
+            if (!m_UseCustomAudio)
+            {
+                audioSource.clip = movie.audioClip;
+                audioSource.Play();
+            }
+            else
+            {
+                AudioManager.Instance.PlayAudioClip(m_CustomAudioClip);
+            }
 		}
 		movie.Play();
 	}

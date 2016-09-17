@@ -65,14 +65,15 @@ public class ManagerParticles : MonoBehaviour {
 
 		else if(Input.GetKeyUp(KeyCode.Alpha5))
 		{
-            if (!Firework.GetComponent<ParticleSystem>().isPlaying)
-            {
-                Firework.GetComponent<ParticleSystem>().Play();   
-            }
-            else
-            {
-                Firework.GetComponent<ParticleSystem>().Stop();
-            }
+            //if (!Firework.GetComponent<ParticleSystem>().isPlaying)
+            //{
+            //    Firework.GetComponent<ParticleSystem>().Play();   
+            //}
+            //else
+            //{
+            //    Firework.GetComponent<ParticleSystem>().Stop();
+            //    Firework.GetComponent<ParticleSystem>().Clear();
+            //}
 		}
 	}
 }

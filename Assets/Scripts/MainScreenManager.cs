@@ -56,7 +56,7 @@ public class MainScreenManager : MonoBehaviour
 		{
 			PlayTitleTween();
 		}
-		else if(Input.GetKeyDown(KeyCode.F3))
+		else if(Input.GetKeyDown(KeyCode.A))
 		{
 			PlayAdTween();
 		}
