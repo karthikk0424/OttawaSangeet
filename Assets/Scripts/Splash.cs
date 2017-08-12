@@ -10,11 +10,11 @@ public class Splash : MonoBehaviour {
         {
             Application.LoadLevel("Applauncher");
         }
-        else if (Input.GetKeyDown(KeyCode.I))
+        else if (Input.GetKeyDown(KeyCode.F7))
         {
             Application.LoadLevel("Intro");
         }
-        else if (Input.GetKeyDown(KeyCode.F))
+        else if (Input.GetKeyDown(KeyCode.F8))
         {
             m_startFade = true;
         }

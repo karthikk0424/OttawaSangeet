@@ -66,5 +66,6 @@ public class AudioManager : MonoBehaviour {
     {
         m_MusicAudioSource1.Stop();
         m_MusicAudioSource1.clip = null;
+        m_MusicAudioSource1.volume = 1;
     }
 }
