@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class PlayVideo : MonoBehaviour {
 	
@@ -9,6 +10,8 @@ public class PlayVideo : MonoBehaviour {
 	public bool loop = false;
     public AudioClip m_CustomAudioClip;
     public bool m_UseCustomAudio = false;
+    public List<MovieTexture> m_Movies = null;
+
 	public void Start()
 	{
 		GetComponent<Renderer>().material.mainTexture = movie;

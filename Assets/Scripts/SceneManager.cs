@@ -1,142 +1,147 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SceneManager : MonoBehaviour {
+namespace OttawaSangeet
+{
+    public class SceneManager : MonoBehaviour
+    {
 
-	private static SceneManager _instance ;
-	// Use this for initialization
-	void Start () {
-		if(!_instance)
-			_instance = this ;
-		//otherwise, if we do, kill this thing
-		else
-			Destroy(this.gameObject) ;
-		
-		DontDestroyOnLoad(this.gameObject);
-	}
-	
-	// Update is called once per frame
-	void Update()
-	{
-        if (Input.GetKeyDown(KeyCode.Z))
+        private static SceneManager _instance;
+        // Use this for initialization
+        void Start()
         {
-            Application.LoadLevel("TheePori");
+            if (!_instance)
+                _instance = this;
+            //otherwise, if we do, kill this thing
+            else
+                Destroy(this.gameObject);
+
+            DontDestroyOnLoad(this.gameObject);
         }
-        else if (Input.GetKeyDown(KeyCode.X))
+
+        // Update is called once per frame
+        void Update()
         {
-            Application.LoadLevel("ColorfulRays");
+            if (Input.GetKeyDown(KeyCode.Z))
+            {
+                Application.LoadLevel("TheePori");
+            }
+            else if (Input.GetKeyDown(KeyCode.X))
+            {
+                Application.LoadLevel("ColorfulRays");
+            }
+            else if (Input.GetKeyDown(KeyCode.C))
+            {
+                Application.LoadLevel("TravelNebula");
+            }
+            else if (Input.GetKeyDown(KeyCode.V))
+            {
+                Application.LoadLevel("Halo");
+            }
+            else if (Input.GetKeyDown(KeyCode.B))
+            {
+                Application.LoadLevel("BlueMotion");
+            }
+            else if (Input.GetKeyDown(KeyCode.N))
+            {
+                Application.LoadLevel("Fire");
+            }
+            else if (Input.GetKeyDown(KeyCode.M))
+            {
+                Application.LoadLevel("Moon");
+            }
+            else if (Input.GetKeyDown(KeyCode.O))
+            {
+                Application.LoadLevel("Accelerate");
+            }
+            else if (Input.GetKeyDown(KeyCode.S))
+            {
+                Application.LoadLevel("Splash");
+            }
+            else if (Input.GetKeyDown(KeyCode.D))
+            {
+                Application.LoadLevel("Disco");
+            }
+            else if (Input.GetKeyDown(KeyCode.F))
+            {
+                Application.LoadLevel("Flame");
+            }
+            else if (Input.GetKeyDown(KeyCode.G))
+            {
+                Application.LoadLevel("MagicalGround");
+            }
+            else if (Input.GetKeyDown(KeyCode.H))
+            {
+                Application.LoadLevel("Applauncher");
+            }
+            else if (Input.GetKeyDown(KeyCode.J))
+            {
+                Application.LoadLevel("Tornado");
+            }
+            else if (Input.GetKeyDown(KeyCode.K))
+            {
+                Application.LoadLevel("Party");
+            }
+            else if (Input.GetKeyDown(KeyCode.L))
+            {
+                Application.LoadLevel("Rain");
+            }
+            else if (Input.GetKeyDown(KeyCode.Q))
+            {
+                Application.LoadLevel("RainbowFlare");
+            }
+            else if (Input.GetKeyDown(KeyCode.W))
+            {
+                Application.LoadLevel("RainbowSpace");
+            }
+            else if (Input.GetKeyDown(KeyCode.E))
+            {
+                Application.LoadLevel("GlowingRing");
+            }
+            else if (Input.GetKeyDown(KeyCode.R))
+            {
+                Application.LoadLevel("CreditsFireworks");
+            }
+            else if (Input.GetKeyDown(KeyCode.T))
+            {
+                Application.LoadLevel("WallLights");
+            }
+            else if (Input.GetKeyDown(KeyCode.Y))
+            {
+                Application.LoadLevel("GoldenSparkle");
+            }
+            else if (Input.GetKeyDown(KeyCode.I))
+            {
+                Application.LoadLevel("Sequencer");
+            }
+            else if (Input.GetKeyDown(KeyCode.P))
+            {
+                Application.LoadLevel("Lamp");
+            }
+            else if (Input.GetKeyDown(KeyCode.F1))
+            {
+                Application.LoadLevel("MayaNadhi");
+            }
+            else if (Input.GetKeyDown(KeyCode.F2))
+            {
+                Application.LoadLevel("1000Years");
+            }
+            else if (Input.GetKeyDown(KeyCode.F3))
+            {
+                Application.LoadLevel("StrongHold");
+            }
+            else if (Input.GetKeyDown(KeyCode.F4))
+            {
+                Application.LoadLevel("DiscoBall");
+            }
+            else if (Input.GetKeyDown(KeyCode.F5))
+            {
+                Application.LoadLevel("Baradwaj");
+            }
+            else if (Input.GetKeyDown(KeyCode.F6))
+            {
+                Application.LoadLevel("Sangeet");
+            }
         }
-        else if (Input.GetKeyDown(KeyCode.C))
-        {
-            Application.LoadLevel("TravelNebula");
-        }
-        else if (Input.GetKeyDown(KeyCode.V))
-        {
-            Application.LoadLevel("Halo");
-        }
-        else if (Input.GetKeyDown(KeyCode.B))
-        {
-            Application.LoadLevel("BlueMotion");
-        }
-        else if (Input.GetKeyDown(KeyCode.N))
-        {
-            Application.LoadLevel("Fire");
-        }
-        else if (Input.GetKeyDown(KeyCode.M))
-        {
-            Application.LoadLevel("Moon");
-        }
-        else if (Input.GetKeyDown(KeyCode.O))
-        {
-            Application.LoadLevel("Accelerate");
-        }
-        else if (Input.GetKeyDown(KeyCode.S))
-        {
-            Application.LoadLevel("Splash");
-        }
-		else if(Input.GetKeyDown(KeyCode.D))
-		{
-			Application.LoadLevel("Disco");
-		}
-        else if (Input.GetKeyDown(KeyCode.F))
-        {
-            Application.LoadLevel("Flame");
-        }
-        else if (Input.GetKeyDown(KeyCode.G))
-        {
-            Application.LoadLevel("MagicalGround");
-        }
-        else if (Input.GetKeyDown(KeyCode.H))
-        {
-            Application.LoadLevel("Applauncher");
-        }
-        else if (Input.GetKeyDown(KeyCode.J))
-        {
-            Application.LoadLevel("Tornado");
-        }
-        else if (Input.GetKeyDown(KeyCode.K))
-        {
-            Application.LoadLevel("Party");
-        }
-        else if (Input.GetKeyDown(KeyCode.L))
-        {
-            Application.LoadLevel("Rain");
-        }
-        else if (Input.GetKeyDown(KeyCode.Q))
-        {
-            Application.LoadLevel("RainbowFlare");
-        }
-        else if (Input.GetKeyDown(KeyCode.W))
-        {
-            Application.LoadLevel("RainbowSpace");
-        }
-        else if (Input.GetKeyDown(KeyCode.E))
-        {
-            Application.LoadLevel("GlowingRing");
-        }
-		else if(Input.GetKeyDown(KeyCode.R))
-		{
-            Application.LoadLevel("CreditsFireworks");
-        }
-        else if (Input.GetKeyDown(KeyCode.T))
-        {
-            Application.LoadLevel("WallLights");
-        }
-        else if (Input.GetKeyDown(KeyCode.Y))
-        {
-            Application.LoadLevel("GoldenSparkle");
-        }
-        else if (Input.GetKeyDown(KeyCode.I))
-        {
-            Application.LoadLevel("Sequencer");
-        }
-        else if (Input.GetKeyDown(KeyCode.P))
-        {
-            Application.LoadLevel("Lamp");
-        }
-        else if (Input.GetKeyDown(KeyCode.F1))
-        {
-            Application.LoadLevel("MayaNadhi");
-        }
-        else if (Input.GetKeyDown(KeyCode.F2))
-        {
-            Application.LoadLevel("1000Years");
-        }
-        else if (Input.GetKeyDown(KeyCode.F3))
-        {
-            Application.LoadLevel("StrongHold");
-        }
-        else if (Input.GetKeyDown(KeyCode.F4))
-        {
-            Application.LoadLevel("DiscoBall");
-        }
-        else if (Input.GetKeyDown(KeyCode.F5))
-        {
-            Application.LoadLevel("Baradwaj");
-        }
-        else if (Input.GetKeyDown(KeyCode.F6))
-        {
-            Application.LoadLevel("Sangeet");
-        } 
-	}
+    }
 }
