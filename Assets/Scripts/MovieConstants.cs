@@ -25,7 +25,14 @@ public class MovieConstants {
     public const string HALO_DESIGN = "Halo Design";
     public const string MAGICAL_GROUND = "Magical Ground";
     public const string PARTY = "Party";
-
+    public const string RAIN = "Rain";
+    public const string RAINBOW_SPACE = "Rainbow Space";
+    public const string RAINBOW_FLARE = "RainbowFlare";
+    public const string TORNADO = "Tornado";
+    public const string STRONGHOLD = "Stronghold";
+    public const string TRAVEL_BLUE_NEBULA = "TravelBlueNebula";
+    public const string WALL_LIGHTS = "Wall Lights";
+    public const string STAGE_LIGHTS = "stage lights";
     //public
 
     //protected

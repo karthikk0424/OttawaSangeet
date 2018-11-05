@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: e579f1448bc5d4f46b8539deb52ca1b2
+timeCreated: 1504842215
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Miama Nueva
+  fontNames:
+  - Miama Nueva
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

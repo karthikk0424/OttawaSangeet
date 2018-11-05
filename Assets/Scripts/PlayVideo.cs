@@ -1,21 +1,27 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using UnityEngine.SceneManagement;
 
 public class PlayVideo : MonoBehaviour {
 	
-	public MovieTexture movie;
 	public string LoadLevel;
-	public bool PlayAudio = false;
-	public bool loop = false;
     public AudioClip m_CustomAudioClip;
     public bool m_UseCustomAudio = false;
     public List<MovieTexture> m_Movies = null;
+    private MovieTexture movie;
+    [SerializeField ]private List<GameObject> m_ObjectToBeHidden = new List<GameObject>();
 
-	public void Start()
+    public void Start()
 	{
-		GetComponent<Renderer>().material.mainTexture = movie;
-		if(PlayAudio)
+        if (m_ObjectToBeHidden.Count > 0 && MovieManager.Instance.ShouldHideObjects)
+        {
+            m_ObjectToBeHidden.ForEach(x => x.SetActive(false));
+        }
+        movie = GetMovieFromName();
+        GetComponent<Renderer>().material.mainTexture = movie;
+        if (MovieManager.Instance.ShouldPlayAudio)
 		{
             AudioSource audioSource = GetComponent<AudioSource>();
 
@@ -23,12 +29,12 @@ public class PlayVideo : MonoBehaviour {
             {
                 audioSource = gameObject.AddComponent<AudioSource>();
             }
-            if (!m_UseCustomAudio)
+            if (MovieManager.Instance.ShouldPlayAudio)
             {
                 audioSource.clip = movie.audioClip;
                 audioSource.Play();
             }
-            else
+            else if (m_UseCustomAudio)
             {
                 AudioManager.Instance.PlayAudioClip(m_CustomAudioClip);
             }
@@ -36,21 +42,36 @@ public class PlayVideo : MonoBehaviour {
 		movie.Play();
 	}
 
-	public void Update()
+    private MovieTexture GetMovieFromName()
+    {
+        foreach (MovieTexture movie in m_Movies)
+        {
+            if (MovieManager.Instance.MovieName == movie.name)
+            {
+                return movie;
+            }
+        }
+        return m_Movies[0];
+    }
+    private void Update()
 	{
 		if(movie != null)
 		{
 			if(!movie.isPlaying)
 			{
-				if(loop)
+				if(MovieManager.Instance.ShouldLoop)
 				{
 					movie.Stop();
 					Start();
 					return;
 				}
-				if(!string.IsNullOrEmpty(LoadLevel))
+                if (MovieManager.Instance.IsanyMovieInQueue)
+                {
+                    MovieManager.Instance.ContinueWithQueue();
+                }
+				else if (!string.IsNullOrEmpty(OttawaSangeet.SceneManager.ParentScene))
 				{
-					Application.LoadLevel(LoadLevel);
+                    SceneManager.LoadScene(OttawaSangeet.SceneManager.ParentScene);
 				}
 			}
 		}

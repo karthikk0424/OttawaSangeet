@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Songs>
+  <Song Name="Song:   Bombay Theme" Number="100" Singers= "Performed by:    West Orchestra" Chorus="" Dance=""/>
+  <Song Name="Song:   Ganesha Song" Number="016" Singers= "Singer:    " Chorus="`" Dance=""/>
+
+  <Song Name="Song:   Kannalaney / Kehna Hi Kya" Number="01" Singers= "Singer:    Chithra" Chorus="Chorus:   Aswen, Siva, Sandhya, Divya, Kaya, Ann" Dance=""/>
+  <Song Name="Song:   Naan Oru Sindhu" Number="05" Singers= "Singer:    Chithra" Chorus="" Dance=""/>
+  <Song Name="Song:   Bagvaan" Number="017" Singers= "Singer:    Nishad" Chorus="" Dance=""/>
+  <Song Name="Song:   Rang De Mujhe Rang De" Number="7" Singers= "Singer:    Shobha Shekar" Chorus="Chorus:   Flute Siva, Sai, Ann, Shruthi" Dance=""/>
+  <Song Name="Song:   Raja Hamsame" Number="06" Singers= "Singer:    Chithra" Chorus="" Dance=""/>
+  <Song Name="Song:   Jallantha Kavvinta" Number="012" Singers= "Singer:    Chithra" Chorus="" Dance=""/>
+  <Song Name="Song:   Yeh Haseen Vaadiyen" Number="09" Singers= "Singers:    Chithra and Nishad" Chorus="" Dance=""/>
+  <Song Name="Song:   Pachai Nirame" Number="5" Singers= "Singer:    Flute Siva" Chorus="Chorus:   Aswen, Sai, Dhivya and Ananya" Dance=""/>
+  <Song Name="Song:   Sree Chakra Dhaarige" Number="014" Singers= "Singer:    Chithra" Chorus="Chorus:   Dhivya" Dance=""/>
+  <Song Name="Song:   Kannadi" Number="018" Singers= "Singer:    Chithra and Nishad" Chorus="`" Dance=""/>
+  <Song Name="Song:   Arima Arima" Number="1" Singers= "Singers:    Flute Siva and Sandhya" Chorus="Chorus:    Aswen, Sai, Sam" Dance=""/>
+
+  <Song Name="Song:   Chithra Unplugged" Number="015" Singers= "" Chorus="" Dance=""/>
+  <Song Name="Song:   Bhahubali 2 - Dandaalayyaa" Number="3" Singers= "Performed by:    Ottawa Artists - Group" Chorus="" Dance=""/>
+  <Song Name="Song:   Bhahubali 2 - Orori Raja" Number="2" Singers= "Singers:    Divya, Lakshmi and Flute Siva" Chorus="Chorus:   Dhivya, Ann, Rekha and Sandhya" Dance=""/>
+  <Song Name="Song:   Yededo Ennam" Number="04" Singers= "Singer:    Chithra" Chorus="" Dance=""/>
+  <Song Name="Song:   Saathiya Tune Saathiya" Number="010" Singers= "Singers:    Chithra and Nishad" Chorus="" Dance=""/>
+  <Song Name="Song:   Senthoora" Number="6" Singers= "Singer:    Kaya" Chorus="" Dance=""/>
+  <Song Name="Song:   Varmukil" Number="07" Singers= "Singer:    Chithra" Chorus="" Dance=""/>
+  <Song Name="Song:   Ninnu Kori Varnam" Number="03" Singers= "Singer:    Chithra" Chorus="" Dance=""/>
+  <Song Name="Song:   Thendral Vandhu" Number="4" Singers= "Singers:    Hari and Divya" Chorus="" Dance=""/>
+  <Song Name="Song:   Pani Vizhum" Number="019" Singers= "Singer:    Nishad" Chorus="`" Dance=""/>
+  <Song Name="Song:   Payalee Chunmun" Number="011" Singers= "Singers:    Chithra and Nishad" Chorus="" Dance=""/>
+  <Song Name="Song:   Malargale Malargale" Number="02" Singers= "Singers:    Chithra and Nishad" Chorus="" Dance=""/>
+  <Song Name="Song:   Humma Humma Song" Number="8" Singers= "Singers:    Aswen, Shruthi and Dhivya" Chorus="" Dance=""/>
+
+  
+  <!-- <Song Name="Song:   Taara Patham" Number="08" Singers= "Singers:    Chithra and Nishad" Chorus="" Dance=""/> -->
+  <!-- <Song Name="Song:   Manasuna Unnadi" Number="013" Singers= "Singer:    Chithra" Chorus="" Dance=""/> -->
+
+</Songs>

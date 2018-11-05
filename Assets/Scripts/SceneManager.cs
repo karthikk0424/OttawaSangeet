@@ -5,6 +5,7 @@ namespace OttawaSangeet
 {
     public class SceneManager : MonoBehaviour
     {
+        public static string ParentScene = string.Empty;
 
         private static SceneManager _instance;
         // Use this for initialization
@@ -24,35 +25,31 @@ namespace OttawaSangeet
         {
             if (Input.GetKeyDown(KeyCode.Z))
             {
-                Application.LoadLevel("TheePori");
+				PlayMovie(MovieConstants.CLEAN_BLUE);
             }
             else if (Input.GetKeyDown(KeyCode.X))
             {
-                Application.LoadLevel("ColorfulRays");
+                PlayMovie(MovieConstants.COLORFUL_RAYS);
             }
             else if (Input.GetKeyDown(KeyCode.C))
             {
-                Application.LoadLevel("TravelNebula");
+                PlayMovie(MovieConstants.TRAVEL_BLUE_NEBULA);
             }
             else if (Input.GetKeyDown(KeyCode.V))
             {
-                Application.LoadLevel("Halo");
+                PlayMovie(MovieConstants.HALO_DESIGN);
             }
             else if (Input.GetKeyDown(KeyCode.B))
             {
-                Application.LoadLevel("BlueMotion");
+                PlayMovie(MovieConstants.BLUE_MOTION);
             }
             else if (Input.GetKeyDown(KeyCode.N))
             {
-                Application.LoadLevel("Fire");
-            }
-            else if (Input.GetKeyDown(KeyCode.M))
-            {
-                Application.LoadLevel("Moon");
+                PlayMovie(MovieConstants.FIRE);
             }
             else if (Input.GetKeyDown(KeyCode.O))
             {
-                Application.LoadLevel("Accelerate");
+                PlayMovie("stage lights");
             }
             else if (Input.GetKeyDown(KeyCode.S))
             {
@@ -60,15 +57,11 @@ namespace OttawaSangeet
             }
             else if (Input.GetKeyDown(KeyCode.D))
             {
-                Application.LoadLevel("Disco");
-            }
-            else if (Input.GetKeyDown(KeyCode.F))
-            {
-                Application.LoadLevel("Flame");
+                PlayMovie(MovieConstants.DISCO_BALL_COLOR);
             }
             else if (Input.GetKeyDown(KeyCode.G))
             {
-                Application.LoadLevel("MagicalGround");
+                PlayMovie(MovieConstants.MAGICAL_GROUND);
             }
             else if (Input.GetKeyDown(KeyCode.H))
             {
@@ -76,27 +69,23 @@ namespace OttawaSangeet
             }
             else if (Input.GetKeyDown(KeyCode.J))
             {
-                Application.LoadLevel("Tornado");
+                PlayMovie(MovieConstants.TORNADO);
             }
             else if (Input.GetKeyDown(KeyCode.K))
             {
-                Application.LoadLevel("Party");
-            }
-            else if (Input.GetKeyDown(KeyCode.L))
-            {
-                Application.LoadLevel("Rain");
+                PlayMovie(MovieConstants.PARTY);
             }
             else if (Input.GetKeyDown(KeyCode.Q))
             {
-                Application.LoadLevel("RainbowFlare");
+                PlayMovie(MovieConstants.RAINBOW_FLARE);
             }
             else if (Input.GetKeyDown(KeyCode.W))
             {
-                Application.LoadLevel("RainbowSpace");
+                PlayMovie(MovieConstants.RAINBOW_SPACE);
             }
             else if (Input.GetKeyDown(KeyCode.E))
             {
-                Application.LoadLevel("GlowingRing");
+                PlayMovie(MovieConstants.GLOWING_RING);
             }
             else if (Input.GetKeyDown(KeyCode.R))
             {
@@ -104,44 +93,35 @@ namespace OttawaSangeet
             }
             else if (Input.GetKeyDown(KeyCode.T))
             {
-                Application.LoadLevel("WallLights");
+				Application.LoadLevel("IntroSequence");
             }
             else if (Input.GetKeyDown(KeyCode.Y))
             {
-                Application.LoadLevel("GoldenSparkle");
+                PlayMovie("luminousstars");
             }
             else if (Input.GetKeyDown(KeyCode.I))
             {
                 Application.LoadLevel("Sequencer");
             }
-            else if (Input.GetKeyDown(KeyCode.P))
-            {
-                Application.LoadLevel("Lamp");
-            }
-            else if (Input.GetKeyDown(KeyCode.F1))
-            {
-                Application.LoadLevel("MayaNadhi");
-            }
-            else if (Input.GetKeyDown(KeyCode.F2))
-            {
-                Application.LoadLevel("1000Years");
-            }
             else if (Input.GetKeyDown(KeyCode.F3))
             {
-                Application.LoadLevel("StrongHold");
+                PlayMovie(MovieConstants.STRONGHOLD);
             }
             else if (Input.GetKeyDown(KeyCode.F4))
             {
-                Application.LoadLevel("DiscoBall");
+                PlayMovie("Flying light particles");
             }
-            else if (Input.GetKeyDown(KeyCode.F5))
+            else if (Input.GetKeyDown(KeyCode.P))
             {
-                Application.LoadLevel("Baradwaj");
+                Application.LoadLevel("OctaneSplatt");
             }
-            else if (Input.GetKeyDown(KeyCode.F6))
-            {
-                Application.LoadLevel("Sangeet");
-            }
+        }
+
+        private void PlayMovie(string movieName)
+        {
+            ParentScene = Application.loadedLevelName;
+            MovieManager.Instance.ClearQueue();
+            MovieManager.Instance.PlayVideo(movieName, false, false, true);
         }
     }
 }

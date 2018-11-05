@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class ImageSequencer : MonoBehaviour {
 
@@ -7,10 +8,25 @@ public class ImageSequencer : MonoBehaviour {
 	public Texture[] images;
 	public string LoadLevelName;
 	private int index = 0;
+    public bool m_SkipSequencer = false;
+
+    [SerializeField] private List<string> m_MoviesToPlayInSequencer;
 
 	private void Start()
 	{
-		StartCoroutine(BeginLoop());
+        if (m_SkipSequencer)
+        {
+            if (m_MoviesToPlayInSequencer.Count > 0)
+            {
+                MovieManager.Instance.m_QueuedMovieList = m_MoviesToPlayInSequencer;
+                MovieManager.Instance.PlayVideo("", true, true, false);
+            }
+        }
+        else
+        {
+            StartCoroutine(BeginLoop());
+        }
+		
 	}
 
 	private IEnumerator BeginLoop()
@@ -22,11 +38,18 @@ public class ImageSequencer : MonoBehaviour {
 		yield return new WaitForSeconds(timeInterval);
 		
 		if(index == images.Length)
-		{
-			if(LoadLevelName != null)
+        {
+            if (m_MoviesToPlayInSequencer.Count > 0)
+            {
+                MovieManager.Instance.m_QueuedMovieList = m_MoviesToPlayInSequencer;
+                MovieManager.Instance.PlayVideo("", true, true);
+            }
+
+			else if (!string.IsNullOrEmpty(LoadLevelName))
 			{
 				Application.LoadLevel(LoadLevelName);
 			}
+
 			index = 0;
 		}
 		StopAllCoroutines();

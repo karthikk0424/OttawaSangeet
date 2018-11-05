@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 098f1d3da4824fd4d9bb01c5d2328c7b
+timeCreated: 1504913432
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Raiders
+  fontNames:
+  - Raiders
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
