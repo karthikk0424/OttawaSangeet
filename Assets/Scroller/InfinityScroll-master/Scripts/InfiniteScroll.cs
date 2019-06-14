@@ -74,7 +74,7 @@ public abstract class InfiniteScroll : ScrollRect
 
 
 	}
-	private void Update ()
+	protected virtual void Update ()
 	{
 		if (!Application.isPlaying || !init)
 			return;

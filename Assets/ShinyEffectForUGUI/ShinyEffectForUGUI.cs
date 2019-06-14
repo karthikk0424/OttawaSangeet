@@ -28,6 +28,7 @@ namespace Coffee.UIExtensions
 		//################################
 		public const string shaderName = "UI/Hidden/UI-Effect-Shiny";
 
+		private Action m_OnDone;
 
 		//################################
 		// Serialize Members.
@@ -53,33 +54,96 @@ namespace Coffee.UIExtensions
 		/// <summary>
 		/// Location for shiny effect.
 		/// </summary>
-		public float location{ get { return m_Location; } set { m_Location = Mathf.Clamp(value, 0, 1); _SetDirty(); } }
+		public float location
+		{
+			get { return m_Location; }
+			set
+			{
+				m_Location = Mathf.Clamp(value, 0, 1);
+				_SetDirty();
+			}
+		}
+
+		public bool m_PlayOnAwake;
+		public bool m_Loop;
+		public float m_Duration;
+		public bool m_RandomRotation;
+
+		protected override void Awake()
+		{
+			base.Awake();
+
+			if (m_PlayOnAwake)
+			{
+				Play(m_Duration);
+			}
+		}
 
 		/// <summary>
 		/// Width for shiny effect.
 		/// </summary>
-		public float width { get { return m_Width; } set { m_Width = Mathf.Clamp(value, 0, 1); _SetDirty(); } }
+		public float width
+		{
+			get { return m_Width; }
+			set
+			{
+				m_Width = Mathf.Clamp(value, 0, 1);
+				_SetDirty();
+			}
+		}
 
 		/// <summary>
 		/// Softness for shiny effect.
 		/// </summary>
-		public float softness { get { return m_Softness; } set { m_Softness = Mathf.Clamp(value, 0.01f, 1); _SetDirty(); } }
+		public float softness
+		{
+			get { return m_Softness; }
+			set
+			{
+				m_Softness = Mathf.Clamp(value, 0.01f, 1);
+				_SetDirty();
+			}
+		}
 
 		/// <summary>
 		/// Alpha for shiny effect.
 		/// </summary>
-		[System.Obsolete ("Use brightness instead (UnityUpgradable) -> brightness")]
-		public float alpha { get { return m_Brightness; } set { m_Brightness = Mathf.Clamp(value, 0, 1); _SetDirty(); } }
+		[System.Obsolete("Use brightness instead (UnityUpgradable) -> brightness")]
+		public float alpha
+		{
+			get { return m_Brightness; }
+			set
+			{
+				m_Brightness = Mathf.Clamp(value, 0, 1);
+				_SetDirty();
+			}
+		}
 
 		/// <summary>
 		/// Brightness for shiny effect.
 		/// </summary>
-		public float brightness { get { return m_Brightness; } set { m_Brightness = Mathf.Clamp(value, 0, 1); _SetDirty(); } }
+		public float brightness
+		{
+			get { return m_Brightness; }
+			set
+			{
+				m_Brightness = Mathf.Clamp(value, 0, 1);
+				_SetDirty();
+			}
+		}
 
 		/// <summary>
 		/// Highlight factor for shiny effect.
 		/// </summary>
-		public float highlight { get { return m_Highlight; } set { m_Highlight = Mathf.Clamp(value, 0, 1); _SetDirty(); } }
+		public float highlight
+		{
+			get { return m_Highlight; }
+			set
+			{
+				m_Highlight = Mathf.Clamp(value, 0, 1);
+				_SetDirty();
+			}
+		}
 
 		/// <summary>
 		/// Rotation for shiny effect.
@@ -90,7 +154,14 @@ namespace Coffee.UIExtensions
 			{
 				return m_Rotation;
 			}
-			set { if (!Mathf.Approximately(m_Rotation, value)) { m_Rotation = value; _SetDirty(); } }
+			set
+			{
+				if (!Mathf.Approximately(m_Rotation, value))
+				{
+					m_Rotation = value;
+					_SetDirty();
+				}
+			}
 		}
 
 		/// <summary>
@@ -116,7 +187,7 @@ namespace Coffee.UIExtensions
 			base.OnDisable();
 		}
 
-#if UNITY_EDITOR
+		#if UNITY_EDITOR
 		public void OnBeforeSerialize()
 		{
 		}
@@ -130,26 +201,26 @@ namespace Coffee.UIExtensions
 					return;
 
 				var mat = GetMaterial(shaderName);
-				if(m_EffectMaterial == mat && graphic.material == mat)
+				if (m_EffectMaterial == mat && graphic.material == mat)
 					return;
 
 				graphic.material = m_EffectMaterial = mat;
 				EditorUtility.SetDirty(this);
 				EditorUtility.SetDirty(graphic);
-				EditorApplication.delayCall +=AssetDatabase.SaveAssets;
+				EditorApplication.delayCall += AssetDatabase.SaveAssets;
 			};
 		}
 
 		public static Material GetMaterial(string shaderName)
 		{
-			string name = Path.GetFileName (shaderName);
+			string name = Path.GetFileName(shaderName);
 			return AssetDatabase.FindAssets("t:Material " + name)
 				.Select(x => AssetDatabase.GUIDToAssetPath(x))
 				.SelectMany(x => AssetDatabase.LoadAllAssetsAtPath(x))
 				.OfType<Material>()
 				.FirstOrDefault(x => x.name == name);
 		}
-#endif
+		#endif
 
 		/// <summary>
 		/// Modifies the mesh.
@@ -189,6 +260,15 @@ namespace Coffee.UIExtensions
 			}
 		}
 
+		private void OnAnimationDone()
+		{
+			m_OnDone -= OnAnimationDone;
+			if (m_Loop)
+			{
+				Play(m_Duration);
+			}
+		}
+
 		/// <summary>
 		/// Play effect.
 		/// </summary>
@@ -202,6 +282,12 @@ namespace Coffee.UIExtensions
 		/// </summary>
 		public void Play(float duration)
 		{
+			if (m_RandomRotation)
+			{
+				rotation = UnityEngine.Random.Range(-180, 180);
+			}
+			m_OnDone += OnAnimationDone;
+
 			StopAllCoroutines();
 			StartCoroutine(CoPlay(duration, AnimatorUpdateMode.Normal));
 		}
@@ -223,7 +309,7 @@ namespace Coffee.UIExtensions
 		/// </summary>
 		void _SetDirty()
 		{
-			if(graphic)
+			if (graphic)
 				graphic.SetVerticesDirty();
 		}
 
@@ -238,6 +324,12 @@ namespace Coffee.UIExtensions
 					: Time.deltaTime;
 				yield return null;
 			}
+
+			if (m_OnDone != null)
+			{
+				m_OnDone();
+			}
+
 		}
 
 		/// <summary>
@@ -261,7 +353,7 @@ namespace Coffee.UIExtensions
 		{
 			const int PRECISION = (1 << 12) - 1;
 			return (Mathf.FloorToInt(y * PRECISION) << 12)
-				+ Mathf.FloorToInt(x * PRECISION);
+			+ Mathf.FloorToInt(x * PRECISION);
 		}
 
 
